@@ -96,9 +96,17 @@ def brute_force_cow_transport(cows,limit=10):
     transported on a particular trip and the overall list containing all the
     trips
     """
-    # TODO: Your code here
-    pass
-
+    for partition in get_partitions(cows):
+        result=[]
+        for i in range(len(partition)):
+            sum_of_trip = 0
+            for j in partition[i]:
+                sum_of_trip += cows[j]
+                result.append(sum_of_trip)
+        
+        if max(result)<=limit:
+            return partition
+            
         
 # Problem 3
 def compare_cow_transport_algorithms():
@@ -113,10 +121,25 @@ def compare_cow_transport_algorithms():
 
     Returns:
     Does not return anything.
-    """
-    # TODO: Your code here
-    pass
 
+    """
+    
+    import time
+    
+    cows = load_cows("ps1_cow_data.txt")
+    limit=10
+
+    start = time.time()
+    trips=(greedy_cow_transport(cows, limit))
+    print(len(trips))
+    end = time.time()
+    print(end - start)
+
+    start = time.time()
+    trips = (brute_force_cow_transport(cows, limit))
+    print(len(trips))
+    end = time.time()
+    print(end - start)
 
 """
 Here is some test data for you to see the results of your algorithms with. 
@@ -124,11 +147,12 @@ Do not submit this along with any of your answers. Uncomment the last two
 lines to print the result of your problem.
 """
 
-cows = load_cows("ps1_cow_data.txt")
-limit=10
-print(cows)
+#cows = load_cows("ps1_cow_data.txt")
+#limit=10
+#print(cows)
 
-print(greedy_cow_transport(cows, limit))
+#print(greedy_cow_transport(cows, limit))
 #print(brute_force_cow_transport(cows, limit))
 
+compare_cow_transport_algorithms()
 
