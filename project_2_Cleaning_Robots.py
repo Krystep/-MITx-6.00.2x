@@ -7,20 +7,9 @@ import ps2_visualize
 import pylab
 import numpy as np
 
-##################
-## Comment/uncomment the relevant lines, depending on which version of Python you have
-##################
-
-# For Python 3.5:
-#from ps2_verify_movement35 import testRobotMovement
-# If you get a "Bad magic number" ImportError, you are not using Python 3.5 
-
-# For Python 3.6:
 from ps2_verify_movement39 import testRobotMovement
-# If you get a "Bad magic number" ImportError, you are not using Python 3.6
 
 
-# === Provided class Position
 class Position(object):
     """
     A Position represents a location in a two-dimensional room.
@@ -251,8 +240,8 @@ class StandardRobot(Robot):
             self.direction = random.uniform(0, 360)
 
 
-# Uncomment this line to see your implementation of StandardRobot in action!
-##testRobotMovement(StandardRobot, RectangularRoom)
+# Uncomment this line to see the implementation of StandardRobot in action!
+#testRobotMovement(StandardRobot, RectangularRoom)
 
 
 # === Problem 4
@@ -295,8 +284,8 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
                 
 
 
-# Uncomment this line to see how much your simulation takes on average
-print(runSimulation(4, 1.0, 50, 10, 0.7, 1, StandardRobot))
+# Uncomment this line to see how much the simulation takes on average
+# print(runSimulation(4, 1.0, 50, 10, 0.7, 1, StandardRobot))
 
 
 # === Problem 5
@@ -357,20 +346,3 @@ def showPlot2(title, x_label, y_label):
     pylab.show()
     
 
-# === Problem 6
-# NOTE: If you are running the simulation, you will have to close it 
-# before the plot will show up.
-
-#
-# 1) Write a function call to showPlot1 that generates an appropriately-labeled
-#     plot.
-#
-#       (... your call here ...)
-#
-
-#
-# 2) Write a function call to showPlot2 that generates an appropriately-labeled
-#     plot.
-#
-#       (... your call here ...)
-#
