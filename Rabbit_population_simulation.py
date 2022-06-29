@@ -26,7 +26,6 @@ def rabbitGrowth():
         
             if random.random() <= p_rabbit:
                 CURRENTRABBITPOP += 1
-
             
 def foxGrowth():
     """ 
@@ -57,8 +56,6 @@ def foxGrowth():
                     CURRENTFOXPOP += 1
             elif random.random() <= 0.9:
                 CURRENTFOXPOP -= 1
-            
-    
             
 def runSimulation(numSteps):
     """
