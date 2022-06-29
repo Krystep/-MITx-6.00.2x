@@ -2,7 +2,7 @@
 """
 Created on Sun May  1 13:56:56 2022
 
-@author: Anna
+@author: Krystyna
 """
 
 def solveit(test):
@@ -20,8 +20,6 @@ def solveit(test):
                 x+=i
             else:
                 x-=i
-    
-    # IMPLEMENT THIS FUNCTION
 
 #### This test case prints 49 ####
 def f(x):
