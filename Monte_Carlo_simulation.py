@@ -2,7 +2,7 @@
 """
 Created on Sun May 22 15:54:05 2022
 
-@author: Anna
+@author: Krystyna
 """
 
 import random
@@ -52,9 +52,6 @@ def lecture_activities(N, aLecture):
     mean, std = get_mean_and_std(list)
 
     return (mean, 4*std)
-        
-            
-
           
 # sample test cases 
 a = Lecture(1, 1, 1)
