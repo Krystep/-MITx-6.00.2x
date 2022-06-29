@@ -2,12 +2,11 @@
 """
 Created on Sun May  1 13:21:05 2022
 
-@author: Anna
+@author: Krystyna
 """
 
 import random
   
-# You are given this function - do not modify
 def createRandomGraph():
     """Creates a digraph with 7 randomly chosen integer nodes from 0 to 9 and
     randomly chosen directed edges (between 10 and 20 edges)
@@ -26,7 +25,6 @@ def createRandomGraph():
             count += 1
     return g
 
-# You are given this function - do not modify
 def findPath(g, start, end, path=[]):
     """ Uses DFS to find a path between a start and an end node in g.
     If no path is found, returns None. If a path is found, returns the
@@ -40,11 +38,7 @@ def findPath(g, start, end, path=[]):
         if node not in path:
             newpath = findPath(g, node, end, path)
             if newpath: return newpath
-    return None
-                
-#########################        
-## WRITE THIS FUNCTION ##
-#########################        
+    return None     
 
 def allReachable(g, n):
     """
