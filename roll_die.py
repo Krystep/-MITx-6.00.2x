@@ -2,12 +2,11 @@
 """
 Created on Sun May 22 18:54:08 2022
 
-@author: Anna
+@author: Krystyna
 """
 
 import random, pylab
 
-# You are given this function
 def getMeanAndStd(X):
     mean = sum(X)/float(len(X))
     tot = 0.0
@@ -16,7 +15,6 @@ def getMeanAndStd(X):
     std = (tot/len(X))**0.5
     return mean, std
 
-# You are given this class
 class Die(object):
     def __init__(self, valList):
         """ valList is not empty """
@@ -24,7 +22,6 @@ class Die(object):
     def roll(self):
         return random.choice(self.possibleVals)
 
-# Implement this -- Coding Part 1 of 2
 def makeHistogram(values, numBins, xLabel, yLabel, title=None):
     """
       - values, a sequence of numbers
@@ -42,8 +39,6 @@ def makeHistogram(values, numBins, xLabel, yLabel, title=None):
     pylab.ylabel(yLabel) 
     pylab.show()
     
-                    
-# Implement this -- Coding Part 2 of 2
 def getAverage(die, numRolls, numTrials):
     """
       - die, a Die
