@@ -2,7 +2,7 @@
 """
 Created on Sun May  1 13:01:43 2022
 
-@author: Anna
+@author: Krystyna
 """
 
 def song_playlist(songs, max_size):
@@ -25,7 +25,6 @@ def song_playlist(songs, max_size):
     else:
         return playlist
     
-    
     songs.sort(key=lambda a:a[2])
     
     for i in songs:
@@ -36,7 +35,6 @@ def song_playlist(songs, max_size):
         else:
             break
     
-   
     return playlist
 
 songs = [('Roar',4.4, 4.0),('Sail',3.5, 7.7),('Timber', 5.1, 6.9),('Wannabe',2.7, 1.2)]
